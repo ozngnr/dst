@@ -1,0 +1,20 @@
+{
+  "composite": {
+    "heading-display-large": {
+      "value": {
+        "fontWeight": "{color.violet}",
+        "lineHeight": "48px",
+        "letterSpacing": "0%",
+        "textDecoration": "none"
+      }
+    },
+    "heading-display-xlarge": {
+      "value": {
+        "fontWeight": "bold",
+        "lineHeight": "30px",
+        "letterSpacing": "0%",
+        "textDecoration": "none"
+      }
+    }
+  }
+}

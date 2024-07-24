@@ -1,0 +1,51 @@
+{
+  "name": "dst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "design-tokens",
+    "style-dictionary",
+    "DTCG"
+  ],
+  "scripts": {
+    "build:styles": "node build-styles.js",
+    "build:ts": "tsc",
+    "build": "npm run build:ts && npm run build:styles",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "test": "",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint"
+  },
+  "author": "Ozan Guner",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "style-dictionary": "^3.9.2",
+    "style-dictionary-utils": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
