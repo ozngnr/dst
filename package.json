@@ -1,8 +1,8 @@
 {
-  "name": "dst",
-  "version": "1.0.0",
+  "name": "dst-lib",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "keywords": [
@@ -21,6 +21,10 @@
     "prepublishOnly": "npm test && npm run prettier && npm run lint"
   },
   "author": "Ozan Guner",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozngnr/dst.git"
+  },
   "license": "MIT",
   "files": [
     "dist",

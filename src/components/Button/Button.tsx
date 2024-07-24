@@ -1,10 +1,21 @@
 import React from 'react'
 
-interface ButtonProps {
+type BaseButtonAttributes = React.ComponentPropsWithoutRef<'button'>
+type Ref = HTMLButtonElement
+interface ButtonProps extends BaseButtonAttributes {
   label: string
   onClick: () => void
+  className?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ label = 'Button', onClick }) => <button onClick={onClick}>{label}</button>
+const Button = React.forwardRef<Ref, ButtonProps>(({ label = 'Button', className, ...props }, ref) => {
+  return (
+    <button className={`btn ${className}`} {...props} ref={ref}>
+      {label}
+    </button>
+  )
+})
+
+Button.displayName = 'Button'
 
 export default Button
